@@ -58,8 +58,8 @@ var Uploader = {
         xhr.open('post',options.url,true);
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
         if(options.header){
-          for(var i in options.data){
-              xhr.setRequestHeader(i,options.data[i]);
+          for(var i in options.header){
+              xhr.setRequestHeader(i,options.header[i]);
           }
       }
         xhr.send(formData);
