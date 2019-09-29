@@ -103,6 +103,7 @@ Editor.defaultProps = {
         name: "file",
         url: "/upload",
         data: {},
+        header:{},
         filter: (res)=> res.url
       }
     },

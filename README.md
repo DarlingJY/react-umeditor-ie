@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-01-21 06:09:38
- * @LastEditTime: 2019-09-29 10:00:04
+ * @LastEditTime: 2019-09-29 13:02:38
  * @LastEditors: Please set LastEditors
  -->
 # react-umeditor
@@ -131,6 +131,7 @@ You can set the `props`!The `props` maybe is as follows:
 			* name:  form name of xhr
 			* url:  url of server
 			* data: other formData of xhr
+      * header: requestHeaders
 			* filter: filter json style body
 		* customUploader: custom file uploader(see [FileUploader](./src/utils/FileUpload.js))
 

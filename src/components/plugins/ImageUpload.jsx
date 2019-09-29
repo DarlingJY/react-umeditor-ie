@@ -14,14 +14,15 @@ export default class ImageUpload extends Component{
 
   argumentUpload = (file, files, fileIndex, obj) => {
 		let _self = this;
-		const { customUploader, name, data, url, filter, ...others } = this.props;
+		const { customUploader, name, data, header, url, filter, ...others} = this.props;
 
 		let uploader = this.props.customUploader? this.props.customUploader: Uploader;
 
 		uploader.uploadFile({
 			file:file,
 			filename: name,
-			data:  data,
+      data:  data,
+      header:header,
 			url: url,
 			filter: filter,
 			...others,
