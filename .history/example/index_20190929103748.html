@@ -1,0 +1,77 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-01-21 06:09:38
+ * @LastEditTime: 2019-09-29 10:37:47
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Editor Demo</title>
+	
+	<!-- mathquill & umeditor stylesheet & if you have the formula icon -->
+	<link rel="stylesheet" href="../../dist/third-part/mathquill/mathquill.css"/>
+	
+	<link rel="stylesheet" href="app.css" type="text/css" />
+</head>
+<body>
+	<div id="react-container"></div>
+	
+	<!-- jquery & mathquill javascript & if you have the formula icon -->
+	<script src="../../dist/third-part/jquery.min.js"></script>
+	<script src="../../dist/third-part/mathquill/mathquill.js"></script>
+	
+	<!-- your react script -->
+	<script src="bundle.js"></script>
+  <script src="app.js"></script>
+  <script>
+    var React = require('react');
+var Editor = require('react-umeditor');
+
+class App extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			content: ""
+		}
+	}
+	handleChange(content){
+		this.setState({
+			content: content
+		})
+	}
+	getIcons(){
+		var icons = [
+			"source | undo redo | bold italic underline strikethrough fontborder emphasis | ",
+			"paragraph fontfamily fontsize | superscript subscript | ",
+			"forecolor backcolor | removeformat | insertorderedlist insertunorderedlist | selectall | ",
+			"cleardoc  | indent outdent | justifyleft justifycenter justifyright | touppercase tolowercase | ",
+			"horizontal date time  | image emotion spechars | inserttable"
+		]
+		return icons;
+	}
+	getPlugins(){
+		return {
+			"image": { 
+				"uploader": { 
+					"name":"file", 
+					"url": "/api/upload" 
+				} 
+			} 
+		}
+	}
+	render(){
+	    var icons = this.getIcons();
+		var plugins = this.getPlugins();
+		return (<Editor ref="editor" 
+			icons={icons} 
+			value={this.state.content} defaultValue="<p>React Umeditor</p>" 
+			onChange={this.handleChange.bind(this)} 
+			plugins={plugins} />)
+	}
+}
+  </script>
+</body>
+</html>
