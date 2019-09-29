@@ -126,6 +126,7 @@ ImageDialog.defaultProps = {
     name: "file",
     url: "/upload",
     filter: (res)=> res.url,
-    data: {}
+    data: {},
+    header:{},
   }
 }

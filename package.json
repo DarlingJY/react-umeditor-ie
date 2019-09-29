@@ -29,18 +29,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liuhong1happy/react-umeditor.git"
+    "url": "git+https://github.com/DarlingJY/react-umeditor-ie.git"
   },
   "keywords": [
     "react",
     "react-umeditor"
   ],
-  "author": "Holly Liu",
+  "author": "DarlingJY",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/liuhong1happy/react-umeditor/issues"
+    "url": "https://github.com/DarlingJY/react-umeditor-ie/issues"
   },
-  "homepage": "https://github.com/liuhong1happy/react-umeditor#readme",
+  "homepage": "https://github.com/DarlingJY/react-umeditor-ie/blob/master/README.md",
   "dependencies": {
     "classnames": "^2.2.6"
   },

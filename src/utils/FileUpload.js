@@ -54,9 +54,14 @@ var Uploader = {
             options.onEnd(e);
             options.onSuccess(getBody(xhr));
         }
-    
+     
         xhr.open('post',options.url,true);
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        if(options.header){
+          for(var i in options.data){
+              xhr.setRequestHeader(i,options.data[i]);
+          }
+      }
         xhr.send(formData);
     }
 }
