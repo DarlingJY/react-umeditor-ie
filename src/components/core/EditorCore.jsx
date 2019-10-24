@@ -614,7 +614,7 @@ export default class EditorCore extends Component {
       if (html && html.length > 0) {
         if (EditorSelection.range && EditorSelection.validateRange(root, EditorSelection.range)) {
           if (EditorSelection.range.pasteHTML) {
-            EditorSelection.range.pasteHTML('<p>' + html + '</p>');
+            EditorSelection.range.pasteHTML('<span>' + html + '</span>');
           } else {
             let p = EditorDom.createNodeByTag('p', html);
             EditorSelection.range.deleteContents();
@@ -622,7 +622,7 @@ export default class EditorCore extends Component {
           }
           // EditorHistory.execCommand('inserthtml',false,html);
         } else {
-          editarea.innerHTML += '<p>' + html + '</p>';
+          editarea.innerHTML += '<span>' + html + '</span>';
         }
       }
     })
