@@ -150,22 +150,22 @@ Support icons, As fllow:
 ![snapshot](editor.png)
 
 ## Develop
+```
+// clone code
+git clone https://github.com/liuhong1happy/react-umeditor
+cd react-umeditor
+// install require
+npm install
+// build
+npm run build
 
-	// clone code
-	git clone https://github.com/liuhong1happy/react-umeditor
-	cd react-umeditor
-	// install require
-	npm install
-	// build
-	npm run build
-	// run example server
-	cd example
-  // install require
-	npm install
-	npm run dev
-
-  浏览器打开 localhost:8080
-	
+// run example server
+cd example
+npm install
+npm run dev
+  
+浏览器打开 localhost:8080
+```	
 ## Todo - Version 1.0
 
 - [x] 1. Custom Image Uploader Props
@@ -183,9 +183,11 @@ See more [document](https://github.com/liuhong1happy/react-umeditor/blob/master/
 
 ## Concat
 
-Email: [liuhong1.happy@163.com](mailto:liuhong1.happy@163.com)
+Email: [darling_jy@163.com](mailto:darling_jy@163.com)
 
-QQ Group: 247978846
+在liuhong1.happy@163.com的react-umeditor基础上做如下修正
 
-
-修改IE兼容性  及 图片上传支持传header属性
+- 修改IE兼容性  
+- 图片上传支持传header属性
+- 修正多次上传图片插入位置问题
+- 修正本地代码运行问题
