@@ -614,7 +614,7 @@ export default class EditorCore extends Component {
       if (html && html.length > 0) {
         if (EditorSelection.range && EditorSelection.validateRange(root, EditorSelection.range)) {
           if (EditorSelection.range.pasteHTML) {
-            EditorSelection.range.pasteHTML('<span>' + html + '</span>');
+            EditorSelection.range.pasteHTML('<p>' + html + '</p>');
           } else {
             let p = EditorDom.createNodeByTag('p', html);
             EditorSelection.range.deleteContents();
@@ -622,7 +622,7 @@ export default class EditorCore extends Component {
           }
           // EditorHistory.execCommand('inserthtml',false,html);
         } else {
-          editarea.innerHTML += '<span>' + html + '</span>';
+          editarea.innerHTML += '<p>' + html + '</p>';
         }
       }
     })
@@ -745,7 +745,7 @@ export default class EditorCore extends Component {
     EditorSelection.storeRange();
     //关闭所有Dialog、Box、Dropdown
     this.closeAllOpenDialog(state.icon);
-    EditorSelection.restoreRange();
+    state.icon!=='image'&&EditorSelection.restoreRange();
     switch (state.icon) {
       case "source":
         this.editorSource(state)

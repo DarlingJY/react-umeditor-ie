@@ -160,7 +160,11 @@ Support icons, As fllow:
 	npm run build
 	// run example server
 	cd example
-	npm run example
+  // install require
+	npm install
+	npm run dev
+
+  浏览器打开 localhost:8080
 	
 ## Todo - Version 1.0
 
