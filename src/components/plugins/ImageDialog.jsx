@@ -31,6 +31,9 @@ export default class ImageDialog extends Component {
         this.state.handle();
       }
       this.refs.image.clearImages();
+      this.setState({
+        images: []
+      });
     }
   }
   toggle(handle) {
@@ -42,7 +45,7 @@ export default class ImageDialog extends Component {
   handleOkClick(e) {
     // 做相应的处理做相应的处理
     let tabIndex = this.refs.tab.getTabIndex();
-    let images = this.state.images[tabIndex];
+    let images = this.state.images[tabIndex]?this.state.images[tabIndex]:[];
     let strImgs = "";
     if (images.length > 0 && this.state.handle) {
       for (let i = 0; i < images.length; i++) {
