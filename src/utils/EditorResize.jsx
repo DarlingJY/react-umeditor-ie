@@ -144,11 +144,22 @@ export default class EditorResize extends Component {
 		if(className.indexOf("sw-resize")!=-1) direction = "sw-resize";
 		if(className.indexOf("se-resize")!=-1) direction = "se-resize";
 
-		window.removeEventListener("mouseup",this.handleMouseUp);
-		window.removeEventListener("mousemove",this.handleMouseMove);
-		window.addEventListener("mouseup",this.handleMouseUp);
-		window.addEventListener("mousemove",this.handleMouseMove);
+		// window.removeEventListener("mouseup",this.handleMouseUp);
+		// window.removeEventListener("mousemove",this.handleMouseMove);
+		// window.addEventListener("mouseup",this.handleMouseUp);
+		// window.addEventListener("mousemove",this.handleMouseMove);
 
+    document.onmousemove = e=>{
+      _this.handleMouseMove(e)
+    }
+    document.onmouseup = ()=>{
+      document.onmousemove = null
+      document.onmouseup = null
+      if ( e.releaseCapture ) {
+        e.releaseCapture();
+      }
+
+    }
 		this.setState({
 			direction,
 		})
@@ -174,10 +185,10 @@ export default class EditorResize extends Component {
 		};		
 		return (<div className="editor-resize-container" ref={ref=> this.root = ref}>
 				<div className="editor-resize" style={style}>
-					<div className="block-resize nw-resize" onMouseDown={this.handleMouseDown} onMouseMove={this.handleMouseMove} onMouseUp={this.handleMouseUp}></div>
-					<div className="block-resize ne-resize" onMouseDown={this.handleMouseDown} onMouseMove={this.handleMouseMove} onMouseUp={this.handleMouseUp}></div>
-					<div className="block-resize sw-resize" onMouseDown={this.handleMouseDown} onMouseMove={this.handleMouseMove} onMouseUp={this.handleMouseUp}></div>
-					<div className="block-resize se-resize" onMouseDown={this.handleMouseDown} onMouseMove={this.handleMouseMove} onMouseUp={this.handleMouseUp}></div>
+					<div className="block-resize nw-resize" onMouseDown={this.handleMouseDown}></div>
+					<div className="block-resize ne-resize" onMouseDown={this.handleMouseDown}></div>
+					<div className="block-resize sw-resize" onMouseDown={this.handleMouseDown}></div>
+					<div className="block-resize se-resize" onMouseDown={this.handleMouseDown}></div>
 				</div>
 			</div>)
 	}
