@@ -216,8 +216,8 @@ var EditorSelection = {
 			// IE 没有parentElement 固修改成parentNode
 
 			this.customIcons.forEach(cIcon=>{
-				if(cIcon && cIcon.mapRangeState) {
-					rangeState = cIcon.mapRangeState(rangeState, this);
+				if(cIcon && cIcon.maprangestate) {
+					rangeState = cIcon.maprangestate(rangeState, this);
 				}
 			})
 

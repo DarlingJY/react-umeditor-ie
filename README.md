@@ -123,7 +123,7 @@ You can set the `props`!The `props` maybe is as follows:
 			* name: name of icon
 			* title: title of icon
 			* onIconClick: handle event
-			* mapRangeState: filter rangeState
+			* maprangestate: filter rangeState
 			* props: props of icon & component
 			* component: custom component, eg. dialog
 	* image: settings of image dialog 

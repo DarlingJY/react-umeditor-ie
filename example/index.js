@@ -91,7 +91,7 @@ class App extends Component{
 									}
 								})
 							},
-							mapRangeState: (rangeState, selection)=> {
+							maprangestate: (rangeState, selection)=> {
 								var parentElement = selection.range.startContainer.parentNode;
 								rangeState["link"] = { active:false, icon:"link"}
 								while((parentElement.tagName || parentElement.nodeName).toUpperCase()!="DIV"){

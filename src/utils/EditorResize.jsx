@@ -167,7 +167,7 @@ export default class EditorResize extends Component {
 		var style = {
 			width:this.state.width,
 			height:this.state.height,
-			left:this.state.position.x,
+			left:this.state.position.x+10,
 			top:this.state.position.y,
 			display:this.state.show?"block":"none",
 			positoin:"absolute"

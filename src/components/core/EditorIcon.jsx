@@ -53,7 +53,7 @@ export default class EditorIcon extends Component{
 		if(icon=="fontsize" || icon=="fontfamily" || icon == "paragraph"){
 			return (<span ref="root" className={classNames(_className, { active, disabled: disabled || _disabled})} onClick={this.handleClick} {...props}> 
 				<span className="icon-label">{props.name}</span>
-				<span className="icon-caret"/>
+				<span className="icon-caret"></span>
 				</span>)
 		}else{
 			return (<span ref="root" className={classNames(_className, { active, disabled: disabled || _disabled})} onClick={this.handleClick} {...props}></span>)
