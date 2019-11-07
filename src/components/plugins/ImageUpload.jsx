@@ -119,6 +119,7 @@ export default class ImageUpload extends Component{
 			this.props.onChange(0,images);
 	}
 	handleDrop(e){
+    e = e || event;
 		e.preventDefault();
 		let files = e.dataTransfer.files;
 		if(files.length>0){

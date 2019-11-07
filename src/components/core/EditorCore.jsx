@@ -215,7 +215,8 @@ export default class EditorCore extends Component {
       }
     }
     let editorState = this.state.editorState;
-    if (selection && selection.rangeCount > 0) {
+    let tagName = target.tagName.toUpperCase();
+    if (selection && selection.rangeCount > 0&&tagName!=='IMG') {
       if (editorState.icon == "source") {
         editorState = this.exchangeRangeState(editorState);
         this.setState({
@@ -236,7 +237,7 @@ export default class EditorCore extends Component {
       }
     } else if (target && EditorDom.isEditorDom(target, ReactDOM.findDOMNode(
         this.refs.root))) {
-      let tagName = target.tagName.toUpperCase();
+      
       switch (tagName) {
         case "IMG":
           if (this.refs.editarea && this.refs.editarea.setResizeTarget) {

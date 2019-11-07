@@ -42,7 +42,6 @@ class App extends Component{
 		alert(form_data.editor);
 	}
 	handleChange(content){
-		console.log(content);
 		var form_data = this.state.form_data;
 		form_data.editor = content;
 		this.setState({
