@@ -746,8 +746,8 @@ export default class EditorCore extends Component {
     EditorSelection.storeRange();
     //关闭所有Dialog、Box、Dropdown
     this.closeAllOpenDialog(state.icon);
-    (state.icon === 'insertorderedlist'||state.icon === 'insertunorderedlist'||state.icon === 'bold'||state.icon === 'italic'||state.icon === 'indent'||state.icon === 'outdent'||state.icon === 'justifyleft'||state.icon === 'justifycenter'||state.icon === 'justifycenter'||state.icon==='strikethrough'||state.icon==='cleardoc')&&EditorSelection.restoreRange();
-    // EditorSelection.restoreRange();
+    // (state.icon === 'insertorderedlist'||state.icon === 'insertunorderedlist'||state.icon === 'bold'||state.icon === 'italic'||state.icon === 'indent'||state.icon === 'outdent'||state.icon === 'justifyleft'||state.icon === 'justifycenter'||state.icon === 'justifycenter'||state.icon==='strikethrough'||state.icon==='cleardoc')&&EditorSelection.restoreRange();
+    EditorSelection.restoreRange();  
     switch (state.icon) {
       case "source":
         this.editorSource(state)

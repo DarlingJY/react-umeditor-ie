@@ -101,7 +101,7 @@ export default class EditorContentEditableDiv extends React.Component{
 
 	render(){
 		return (
-			<div className="editor-contenteditable-div">
+			<div className="editor-contenteditable-div" tabIndex="0" hideFocus="true" style="outline=0;">
 				<EditorResize ref="resize" />
 				<div className="editable-range"
 					ref="edit"
