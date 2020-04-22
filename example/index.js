@@ -47,7 +47,13 @@ class App extends Component{
 		this.setState({
 			form_data: form_data
 		})
-	}
+  }
+  componentDidMount(){
+    console.log(this.editor.focusEditor,this.editor.focusEditor())
+  }
+  test=()=>{
+    console.log(this.editor.focusEditor,this.editor.focusEditor())
+  }
 
 	render(){
 		  var icons = this.getIcons();
@@ -115,16 +121,19 @@ class App extends Component{
 				      plugins:plugins
 			    })
 		  }
-		  var form_data = this.state.form_data;
+      var form_data = this.state.form_data;
+      
 		return (
 			<div>
 				<Editor
+        ref={val=>this.editor=val}
 					icons={icons}
 					plugins={plugins}
 					value={form_data.editor}
 					defaultValue="<p>React Umeditor</p>"
-					onChange={this.handleChange.bind(this)}
+          onChange={this.handleChange.bind(this)}
 				/>
+        <span onClick={this.test}>测试按钮</span>
 			</div>
 		)
 	}
