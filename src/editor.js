@@ -69,7 +69,6 @@ export default class Editor extends Component {
       defaultValue,
       ...props
     } = this.props;
-    console.log(loaded)
     if (!this.state.loaded) {
       return (
         <div

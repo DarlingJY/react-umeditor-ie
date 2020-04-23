@@ -48,12 +48,7 @@ class App extends Component{
 			form_data: form_data
 		})
   }
-  componentDidMount(){
-    console.log(this.editor.focusEditor,this.editor.focusEditor())
-  }
-  test=()=>{
-    console.log(this.editor.focusEditor,this.editor.focusEditor())
-  }
+
 
 	render(){
 		  var icons = this.getIcons();
@@ -133,7 +128,6 @@ class App extends Component{
 					defaultValue="<p>React Umeditor</p>"
           onChange={this.handleChange.bind(this)}
 				/>
-        <span onClick={this.test}>测试按钮</span>
 			</div>
 		)
 	}
