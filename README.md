@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-01-21 06:09:38
- * @LastEditTime: 2019-09-29 13:02:38
+ * @LastEditTime: 2020-04-23 09:57:03
  * @LastEditors: Please set LastEditors
  -->
 # react-umeditor
@@ -191,3 +191,4 @@ Email: [darling_jy@163.com](mailto:darling_jy@163.com)
 - 图片上传支持传header属性
 - 修正多次上传图片插入位置问题
 - 修正本地代码运行问题
+- 修正focusEditor
